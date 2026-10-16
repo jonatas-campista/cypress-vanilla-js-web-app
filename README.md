@@ -1,14 +1,26 @@
-# Vanilla JS Web App example
+# Testes E2E com Cypress — app de cadastro de imagens
 
-This is a simple app website to store images on localStorage using best practices of accessibility.
+![Cypress](https://img.shields.io/badge/Cypress-17202C?logo=cypress&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
 
-[Access it live here](https://erickwendel.github.io/vanilla-js-web-app-example)
+Automação dos cenários BDD de uma aplicação em JavaScript puro que cadastra imagens (título + URL) e as
+guarda no `localStorage`.
 
-<img width="969" alt="print" src="https://github.com/ErickWendel/vanilla-js-web-app-example/assets/8060102/d78cd171-3099-42cd-a1b9-7f61095faf2a">
+## O que foi feito
 
+- Implementação dos cenários escritos em Gherkin no arquivo [`app.feature`](app.feature).
+- **Page Object** (`RegisterForm`) com os seletores e ações do formulário.
+- Validação de mensagens de erro, ícones de validação e cor da borda dos campos inválidos.
+- Limpeza do `localStorage` após os testes, para manter o isolamento.
 
+## Como rodar
 
-# Running
+```bash
+npm ci
+npm start          # sobe a aplicação localmente
+npx cypress open   # em outro terminal
+```
 
-Restore the dependencies with `npm ci` and run with `npm start`.
+## Créditos
 
+Fork do [vanilla-js-web-app-example](https://github.com/ErickWendel/vanilla-js-web-app-example),
+de Erick Wendel. A aplicação é do autor original; os testes em `cypress/e2e/` foram escritos por mim.
